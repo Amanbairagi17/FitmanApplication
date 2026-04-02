@@ -6,7 +6,11 @@ spring:
     mongodb:
       uri: mongodb://localhost:27017/fitnessrecommendation
       database: fitnessrecommendation
-
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
 
 
 server:
@@ -22,3 +26,11 @@ eureka:
     prefer-ip-address: true
     hostname: localhost
     instance-id: localhost:${spring.application.name}:${server.port}
+
+rabbitmq:
+  exchange:
+    name: fitness.exchange
+  queue:
+    name: activity.queue
+  routing:
+    key: activity.tracking
