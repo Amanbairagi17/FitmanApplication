@@ -1,7 +1,4 @@
 spring:
-  application:
-   name : ai-serivce
-
   data:
     mongodb:
       uri: mongodb://localhost:27017/fitnessrecommendation
